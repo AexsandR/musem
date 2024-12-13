@@ -1,34 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="h-100">
 <head>
     <meta charset="UTF-8">
-    <title>Socket.IO Example</title>
-</head>
-<body>
-    <h1>Отправка сообщений через Socket.IO</h1>
-    
-    <!-- Поле ввода для сообщения -->
-    <input type="text" id="messageInput" placeholder="Введите сообщение...">
-    <button onclick="sendMessage()">Отправить</button>
-
-    <!-- Подключение к CDN для библиотеки Socket.IO -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.min.js"></script>
-    <script>
-        // Создаем соединение с сервером
-        const socket = io('http://192.168.1.147:8080');
-        
-        function sendMessage() {
-            // Получаем значение из поля ввода
-            let message = document.getElementById("messageInput").value;
-            
-            if (message.trim()) {
-                // Отправляем сообщение на сервер
-                socket.emit('message', message);
-                
-                // Очищаем поле ввода после отправки
-                document.getElementById("messageInput").value = '';
-            }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <title>Контейнер в центре</title>
+    <!-- Подключение Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQXH6nwn1vlkX1V8PQEh4mqgRgG07lWimauE7GFGF" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
         }
-    </script>
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/34763475t7347834/admin">Главная</a>
+          <a class="btn btn-success" href="/34763475t7347834/admin/add">Добавить картинку</a>
+        </div>
+    </nav>
+
+    <div>
+        <div class="container-text-centre">
+            <h1 class="text-center">выберите стиль</h1>
+        </div>
+        <div class="row justify-content-md-center d-flex align-items-center flex-wrap" style="gap: 30px;width: 100%;">
+            <div class="card" style="width: 18rem;">
+                <img src="../static/media/Аниме.png" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Стиль аниме</h5>
+                    <a href="/34763475t7347834/admin/anime" class="btn btn-primary">Перейти куда-нибудь</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="../static/media/Пиксель-арт.png" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Стиль Пиксель-арт</h5>
+                    <a href="/34763475t7347834/admin/pixelart" class="btn btn-primary">Перейти куда-нибудь</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../static/media/Реализм.png" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Стиль Реализм</h5>
+                    <a href="/34763475t7347834/admin/realism" class="btn btn-primary">Перейти куда-нибудь</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../static/media/Импрессионизм.png" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Стиль Импрессионизм</h5>
+                    <a href="/34763475t7347834/admin/impressionism" class="btn btn-primary">Перейти куда-нибудь</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="footer mt-auto py-3 bg-primary">
+          <div class="container">
+          </div>
+        </footer>
+        <!-- Скрипт для работы Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkFzwmK" crossorigin="anonymous"></script>
 </body>
 </html>

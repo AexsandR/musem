@@ -1,2 +1,3 @@
 from .Img import Img
-from .Img_tg import Img_tg
+from .Style import Style
+from .StyleText import StyleText

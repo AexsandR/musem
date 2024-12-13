@@ -22,17 +22,14 @@ def global_init(database):
 
     engine = sqlalchemy.create_engine(connect_string, echo=False)
     __factory = orm.sessionmaker(bind=engine)
-    print(__factory)
 
     from . import __all_models
 
     SqlAlchemyBase.metadata.create_all(engine)
-    print("----")
-    print(__factory)
+
 
 
 
 def create_session() -> Session:
     global __factory
-    print(__factory)
     return __factory()
